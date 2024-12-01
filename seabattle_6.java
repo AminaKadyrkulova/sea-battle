@@ -153,7 +153,7 @@ public class Main {
 			System.out.println("Hit!");
 			if (isShipSunk(i, j)) {
 				System.out.println("You sank a ship!");
-				markSunkShip(i, j);
+				markShip(i, j);
 			}
 		}
 		else {
@@ -182,10 +182,10 @@ public class Main {
 	}
 
 	public void markSunkShip(int row, int column) {
-		markDirection(row, column, -1, 0);
-		markDirection(row, column, 1, 0);
-		markDirection(row, column, 0, -1);
-		markDirection(row, column, 0, 1);
+		markShip(row, column, -1, 0);
+		markShip(row, column, 1, 0);
+		markShip(row, column, 0, -1);
+		markShip(row, column, 0, 1);
 	}
 
 	public void markShip(int row,int column, int dirRow, int dirCol) {
